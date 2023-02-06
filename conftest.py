@@ -10,7 +10,7 @@ def pytest_addoption(parser):
     parser.addoption('--headless', action='store', default='false',
                      help="Open a browser invisible, without GUI is used by default")
 
-@pytest.fixture(scope="module")  #scope"module" или function
+@pytest.fixture(scope="function")  #scope"module" или function
 def browser(request):
     browser_name = request.config.getoption("browser_name")
     user_language = request.config.getoption("language")
