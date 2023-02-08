@@ -10,7 +10,7 @@ class ProductPage(BasePage):
         #print(product_name, product_price)  #for debug
         btn_add = self.find_element(*ProductPageLocators.BTN_ADD_TO_BASKET)
         btn_add.click()
-        #self.solve_quiz_and_get_code()  #disabled after solved
+        self.solve_quiz_and_get_code()  #disabled after solved
 
         inf_product_added = self.find_element(*ProductPageLocators.INF_PRODUCT_ADDED)
         inf_product_added = inf_product_added.text
